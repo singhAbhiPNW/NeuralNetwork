@@ -19,9 +19,9 @@ async function runExample(){
 
   await session.loadModel("DLnet_WineData.onnx");
   let outputMap = await session.run([tensorX]);
-  let outputData = outputMap.get('output1');
+  let outputData = outputMap.get('result');
 
-  let predictions = document.getElementById("predictions);
+  let predictions = document.getElementById("predictions");
   predictions.innerHTML = `<hr> Got an output tensor with value: <br/>
   <table>
   <tr>
